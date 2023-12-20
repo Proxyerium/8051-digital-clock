@@ -1,20 +1,17 @@
 #include <stc89.h>
 
+extern void timerProcess(void);
+extern void sandglassProcess(void);
+extern unsigned char timerActive;
+extern unsigned char sandglassActive;
+unsigned int timerT0C = 0;
+unsigned int sandglassT0C = 0;
 /* 
 OSC@11.088MHz -> 1.082251μs
 1.082251*924000 = 999999.924μs
 65535-924 = 64611 + offset
 there's still +-5ms error.
 */
-
-extern void timerProcess(void);
-extern void sandglassProcess(void);
-
-extern unsigned char timerActive;
-extern unsigned char sandglassActive;
-unsigned int timerT0C = 0;
-unsigned int sandglassT0C = 0;
-// unsigned int T0C = 0;
 
 
 void initT0(void){
@@ -37,14 +34,6 @@ void routineT0(void) __interrupt(1){
     TH0 = 64694/256;
     TL0 = 64694%256;
 
-    // T0C++;
-    // if(T0C>=1000){
-    //     T0C = 0;
-
-    //     timerProcess();
-
-    //     sandglassProcess();
-    // }
     if(timerActive){
         timerT0C++; 
         if(timerT0C>=1000){timerT0C = 0; timerProcess();}

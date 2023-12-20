@@ -3,7 +3,6 @@
 
 extern void dateProcess(void);
 void clockSetting(void);
-
 extern unsigned char dateD2;
 unsigned char clockFormat = 0;
 unsigned char clockSelect = 0;
@@ -115,10 +114,6 @@ void clock(void){
 
 void clockSetting(void){
     while(1){
-        // nixie(3, 12);
-        
-        // nixie(6, 12);
-        
         switch(clockSelect){
             // H1
             case 0:

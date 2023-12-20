@@ -1,7 +1,6 @@
 #include <stc89.h>
 #include "../hdr/modules.h"
 
-extern unsigned char isHold;
 extern unsigned char clockH1;
 extern unsigned char clockH2;
 extern unsigned char clockM1;
@@ -18,6 +17,7 @@ unsigned char alarmS1 = 0;
 unsigned char alarmS2 = 0;
 
 
+/// @brief <Alarm Mode> set up an alarm.
 void alarm(void){
     while(1){
         nixie(1, alarmH1);

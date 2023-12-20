@@ -1,9 +1,7 @@
 #include <stc89.h>
-#include "../hdr/modules.h"
-#include "../hdr/Timer.h"
+#include "../hdr/timers.h"
 #include "../hdr/features.h"
-
-extern unsigned char isHold;
+#include "../hdr/modules.h"
 
 
 void main(void){

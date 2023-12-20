@@ -2,7 +2,6 @@
 #include "../hdr/modules.h"
 
 void sandglassSetting(void);
-
 unsigned char sandglassActive = 0;
 unsigned char sandglassSelect = 0;
 unsigned char sandglassA = 0;

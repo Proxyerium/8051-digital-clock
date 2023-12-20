@@ -1,9 +1,7 @@
 #include <stc89.h>
 
-extern void beep(unsigned int, unsigned int);
 extern void clockProcess(void);
 extern void alarmProcess(void);
-
 unsigned int T1C = 0;
 
 

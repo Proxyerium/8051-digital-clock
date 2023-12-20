@@ -2,7 +2,6 @@
 #include "../hdr/modules.h"
 
 void dateSetting(void);
-
 unsigned char dateFormat = 0;
 unsigned char dateSelect = 0;
 unsigned char dateY1 = 2;
@@ -144,6 +143,7 @@ void dateSetting(void){
                     dateD1 = dateD1Mem;
                     dateD2 = dateD2Mem;
                     beep(200, 2000);
+                    return;
                 }
                 else{
                     ++dateSelect;
@@ -265,6 +265,5 @@ void dateProcess(void){
     if(dateY3Mem>9){dateY3Mem = 0; ++dateY2Mem;}
     if(dateY2Mem>9){dateY2Mem = 0; ++dateY2Mem;}
     if(dateY1Mem>=2 && dateY2Mem>1){dateY2Mem = 1; dateY3Mem = 0; dateY4Mem = 0;}
-
     beep(200, 2000);
 }
