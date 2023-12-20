@@ -1,6 +1,5 @@
 #include <stc89.h>
-
-extern void delay(unsigned int);
+#include "../hdr/modules.h"
 
 
 /// @brief Show a sign in one nixie's unit.

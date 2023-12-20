@@ -1,12 +1,8 @@
 #include <stc89.h>
+#include "../hdr/modules.h"
 
-extern void beep(unsigned int, unsigned int);
-extern void delay(unsigned int);
-extern unsigned char key(void);
-extern void nixie(unsigned char, unsigned char);
 void timerLoad(void);
 
-extern unsigned char isHold;
 unsigned char timerActive = 0;
 unsigned char timerA = 10;
 unsigned char timerB = 10;

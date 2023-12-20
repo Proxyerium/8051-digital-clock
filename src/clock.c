@@ -1,13 +1,9 @@
 #include <stc89.h>
+#include "../hdr/modules.h"
 
-extern void beep(unsigned int, unsigned int);
-extern void delay(unsigned int);
-extern unsigned char key(void);
-extern void nixie(unsigned char, unsigned char);
 extern void dateProcess(void);
 void clockSetting(void);
 
-extern unsigned char isHold;
 extern unsigned char dateD2;
 unsigned char clockFormat = 0;
 unsigned char clockSelect = 0;

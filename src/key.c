@@ -1,6 +1,6 @@
 #include <stc89.h>
+#include "../hdr/modules.h"
 
-extern void delay(unsigned int);
 unsigned char isHold = 0;
 
 

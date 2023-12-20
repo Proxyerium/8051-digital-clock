@@ -1,14 +1,7 @@
 #include <stc89.h>
-#include "buzzer.c"
-#include "key.c"
-#include "nixie.c"
-#include "T0.c"
-#include "T1.c"
-#include "clock.c"
-#include "alarm.c"
-#include "timer.c"
-#include "date.c"
-#include "sandglass.c"
+#include "../hdr/modules.h"
+#include "../hdr/Timer.h"
+#include "../hdr/features.h"
 
 extern unsigned char isHold;
 

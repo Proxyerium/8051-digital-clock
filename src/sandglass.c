@@ -1,18 +1,15 @@
 #include <stc89.h>
+#include "../hdr/modules.h"
 
-extern void beep(unsigned int, unsigned int);
-extern void delay(unsigned int);
-extern unsigned char key(void);
-extern void nixie(unsigned char, unsigned char);
 void sandglassSetting(void);
 
-extern unsigned char isHold;
 unsigned char sandglassActive = 0;
 unsigned char sandglassSelect = 0;
 unsigned char sandglassA = 0;
 unsigned char sandglassB = 6;
 unsigned char sandglassC = 0;
 unsigned char sandglassD = 0;
+
 
 /// @brief <Sandglass Mode> count down.
 void sandglass(void){
