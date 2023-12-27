@@ -209,7 +209,7 @@ void dateSetting(void){
         if(dateD2Mem==255){dateD2Mem = 0; --dateD1Mem;}
         if(dateD2Mem>9){dateD2Mem = 0; ++dateD1Mem;}
         // M2
-        if(dateM2Mem==255){dateM2Mem = 0; --dateM1Mem;}
+        if(dateM2Mem<1){dateM2Mem = 0; --dateM1Mem;}
         if(dateM2Mem>9){dateM2Mem = 0; ++dateM1Mem;}
         // M1
         if(dateM1Mem==255 && dateM2Mem<1){dateM1Mem = 1; dateM2Mem = 2;}
